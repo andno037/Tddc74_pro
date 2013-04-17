@@ -1,782 +1,161 @@
-#reader(lib"read.ss""wxme")WXME0108 ## 
-#|
-   This file uses the GRacket editor format.
-   Open this file in DrRacket version 5.3.2 or later to read it.
+(require 2htdp/image)
 
-   Most likely, it was created by saving a program in DrRacket,
-   and it probably contains a program with non-text elements
-   (such as images or comment boxes).
 
-            http://racket-lang.org/
-|#
- 30 7 #"wxtext\0"
-3 1 6 #"wxtab\0"
-1 1 8 #"wximage\0"
-2 0 8 #"wxmedia\0"
-4 1 34 #"(lib \"syntax-browser.ss\" \"mrlib\")\0"
-1 0 16 #"drscheme:number\0"
-3 0 44 #"(lib \"number-snip.ss\" \"drscheme\" \"private\")\0"
-1 0 36 #"(lib \"comment-snip.ss\" \"framework\")\0"
-1 0 93
-(
- #"((lib \"collapsed-snipclass.ss\" \"framework\") (lib \"collapsed-sni"
- #"pclass-wxme.ss\" \"framework\"))\0"
-) 0 0 43 #"(lib \"collapsed-snipclass.ss\" \"framework\")\0"
-0 0 19 #"drscheme:sexp-snip\0"
-0 0 36 #"(lib \"cache-image-snip.ss\" \"mrlib\")\0"
-1 0 68
-(
- #"((lib \"image-core.ss\" \"mrlib\") (lib \"image-core-wxme.rkt\" \"mr"
- #"lib\"))\0"
-) 1 0 29 #"drscheme:bindings-snipclass%\0"
-1 0 88
-(
- #"((lib \"pict-snip.rkt\" \"drracket\" \"private\") (lib \"pict-snip.r"
- #"kt\" \"drracket\" \"private\"))\0"
-) 0 0 33 #"(lib \"bullet-snip.ss\" \"browser\")\0"
-0 0 25 #"(lib \"matrix.ss\" \"htdp\")\0"
-1 0 22 #"drscheme:lambda-snip%\0"
-1 0 26 #"drracket:spacer-snipclass\0"
-0 0 57
-#"(lib \"hrule-snip.rkt\" \"macro-debugger\" \"syntax-browser\")\0"
-1 0 26 #"drscheme:pict-value-snip%\0"
-0 0 45 #"(lib \"image-snipr.ss\" \"slideshow\" \"private\")\0"
-1 0 38 #"(lib \"pict-snipclass.ss\" \"slideshow\")\0"
-2 0 55 #"(lib \"vertical-separator-snip.ss\" \"stepper\" \"private\")\0"
-1 0 18 #"drscheme:xml-snip\0"
-1 0 31 #"(lib \"xml-snipclass.ss\" \"xml\")\0"
-1 0 21 #"drscheme:scheme-snip\0"
-2 0 34 #"(lib \"scheme-snipclass.ss\" \"xml\")\0"
-1 0 10 #"text-box%\0"
-1 0 32 #"(lib \"text-snipclass.ss\" \"xml\")\0"
-1 0 1 6 #"wxloc\0"
-          0 0 56 0 1 #"\0"
-0 75 1 #"\0"
-0 10 90 -1 90 -1 3 -1 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 255 255 255 1 -1 0 9
-#"Standard\0"
-0 75 12 #"Courier New\0"
-0 14 90 -1 90 -1 3 -1 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 255 255 255 1 -1 2 1
-#"\0"
-0 -1 1 #"\0"
-1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 1 1 1 1 1 1 0 0 0 0 0 0 -1 -1 2 24
-#"framework:default-color\0"
-0 -1 1 #"\0"
-1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 -1 -1 2 1
-#"\0"
-0 -1 1 #"\0"
-1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 150 0 150 0 0 0 -1 -1 2 15
-#"text:ports out\0"
-0 -1 1 #"\0"
-1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 150 0 150 0 0 0 -1 -1 2 1
-#"\0"
-0 -1 1 #"\0"
-1.0 0 -1 -1 93 -1 -1 -1 0 0 0 0 0 0 0 0 0 1.0 1.0 1.0 255 0 0 0 0 0 -1
--1 2 15 #"text:ports err\0"
-0 -1 1 #"\0"
-1.0 0 -1 -1 93 -1 -1 -1 0 0 0 0 0 0 0 0 0 1.0 1.0 1.0 255 0 0 0 0 0 -1
--1 2 1 #"\0"
-0 -1 1 #"\0"
-1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 0 0 175 0 0 0 -1 -1 2 17
-#"text:ports value\0"
-0 -1 1 #"\0"
-1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 0 0 175 0 0 0 -1 -1 2 1
-#"\0"
-0 -1 1 #"\0"
-1.0 0 92 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1.0 1.0 1.0 34 139 34 0 0 0 -1
--1 2 27 #"Matching Parenthesis Style\0"
-0 -1 1 #"\0"
-1.0 0 92 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1.0 1.0 1.0 34 139 34 0 0 0 -1
--1 2 1 #"\0"
-0 -1 1 #"\0"
-1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 38 38 128 0 0 0 -1 -1 2 37
-#"framework:syntax-color:scheme:symbol\0"
-0 -1 1 #"\0"
-1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 38 38 128 0 0 0 -1 -1 2 38
-#"framework:syntax-color:scheme:keyword\0"
-0 -1 1 #"\0"
-1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 38 38 128 0 0 0 -1 -1 2 1
-#"\0"
-0 -1 1 #"\0"
-1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 194 116 31 0 0 0 -1 -1 2
-38 #"framework:syntax-color:scheme:comment\0"
-0 -1 1 #"\0"
-1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 194 116 31 0 0 0 -1 -1 2 1
-#"\0"
-0 -1 1 #"\0"
-1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 41 128 38 0 0 0 -1 -1 2 37
-#"framework:syntax-color:scheme:string\0"
-0 -1 1 #"\0"
-1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 41 128 38 0 0 0 -1 -1 2 39
-#"framework:syntax-color:scheme:constant\0"
-0 -1 1 #"\0"
-1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 41 128 38 0 0 0 -1 -1 2 1
-#"\0"
-0 -1 1 #"\0"
-1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 132 60 36 0 0 0 -1 -1 2 42
-#"framework:syntax-color:scheme:parenthesis\0"
-0 -1 1 #"\0"
-1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 132 60 36 0 0 0 -1 -1 2 1
-#"\0"
-0 -1 1 #"\0"
-1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 255 0 0 0 0 0 -1 -1 2 36
-#"framework:syntax-color:scheme:error\0"
-0 -1 1 #"\0"
-1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 255 0 0 0 0 0 -1 -1 2 1
-#"\0"
-0 -1 1 #"\0"
-1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 -1 -1 2 36
-#"framework:syntax-color:scheme:other\0"
-0 -1 1 #"\0"
-1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 -1 -1 2 16
-#"Misspelled Text\0"
-0 -1 1 #"\0"
-1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 -1 -1 2 1
-#"\0"
-0 -1 1 #"\0"
-1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 81 112 203 0 0 0 -1 -1 2
-38 #"drracket:check-syntax:lexically-bound\0"
-0 -1 1 #"\0"
-1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 81 112 203 0 0 0 -1 -1 2 1
-#"\0"
-0 -1 1 #"\0"
-1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 178 34 34 0 0 0 -1 -1 2 28
-#"drracket:check-syntax:set!d\0"
-0 -1 1 #"\0"
-1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 178 34 34 0 0 0 -1 -1 2 37
-#"drracket:check-syntax:unused-require\0"
-0 -1 1 #"\0"
-1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 255 0 0 0 0 0 -1 -1 2 36
-#"drracket:check-syntax:free-variable\0"
-0 -1 1 #"\0"
-1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 255 0 0 0 0 0 -1 -1 2 1
-#"\0"
-0 -1 1 #"\0"
-1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 68 0 203 0 0 0 -1 -1 2 31
-#"drracket:check-syntax:imported\0"
-0 -1 1 #"\0"
-1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 68 0 203 0 0 0 -1 -1 2 47
-#"drracket:check-syntax:my-obligation-style-pref\0"
-0 -1 1 #"\0"
-1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 178 34 34 0 0 0 -1 -1 2 1
-#"\0"
-0 -1 1 #"\0"
-1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 0 116 0 0 0 0 -1 -1 2 50
-#"drracket:check-syntax:their-obligation-style-pref\0"
-0 -1 1 #"\0"
-1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 0 116 0 0 0 0 -1 -1 2 48
-#"drracket:check-syntax:unk-obligation-style-pref\0"
-0 -1 1 #"\0"
-1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 -1 -1 2 1
-#"\0"
-0 -1 1 #"\0"
-1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 139 142 28 0 0 0 -1 -1 2
-49 #"drracket:check-syntax:both-obligation-style-pref\0"
-0 -1 1 #"\0"
-1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 139 142 28 0 0 0 -1 -1 2
-26 #"plt:htdp:test-coverage-on\0"
-0 -1 1 #"\0"
-1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 0 0 0 0 0 0 -1 -1 2 1
-#"\0"
-0 -1 1 #"\0"
-1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 1 0 0 0 0 0 0 255 165 0 0 0 0 -1 -1 2 27
-#"plt:htdp:test-coverage-off\0"
-0 -1 1 #"\0"
-1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 1 0 0 0 0 0 0 255 165 0 0 0 0 -1 -1 4 1
-#"\0"
-0 70 1 #"\0"
-1.0 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 1.0 1.0 1.0 1.0 1.0 1.0 0 0 0 0 0 0
--1 -1 4 4 #"XML\0"
-0 70 1 #"\0"
-1.0 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 1.0 1.0 1.0 1.0 1.0 1.0 0 0 0 0 0 0
--1 -1 2 1 #"\0"
-0 -1 1 #"\0"
-1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 34 139 34 0 0 0 -1 -1 2 37
-#"plt:module-language:test-coverage-on\0"
-0 -1 1 #"\0"
-1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 34 139 34 0 0 0 -1 -1 2 1
-#"\0"
-0 -1 1 #"\0"
-1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 176 48 96 0 0 0 -1 -1 2 38
-#"plt:module-language:test-coverage-off\0"
-0 -1 1 #"\0"
-1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 176 48 96 0 0 0 -1 -1 4 1
-#"\0"
-0 71 1 #"\0"
-1.0 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 1.0 1.0 1.0 1.0 1.0 1.0 0 0 0 0 0 0
--1 -1 4 1 #"\0"
-0 -1 1 #"\0"
-1.0 0 -1 -1 -1 -1 -1 -1 1 0 0 0 0 0 0 0 0 1.0 1.0 1.0 0 0 255 0 0 0 -1
--1 4 1 #"\0"
-0 71 1 #"\0"
-1.0 0 -1 -1 -1 -1 -1 -1 1 0 0 0 0 0 0 0 0 1.0 1.0 1.0 0 0 255 0 0 0 -1
--1 4 1 #"\0"
-0 71 1 #"\0"
-1.0 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1.0 1.0 1.0 0 100 0 0 0 0 -1
--1 2 1 #"\0"
-0 -1 1 #"\0"
-1 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0 0 0 1 1 1 200 0 0 0 0 0 -1 -1
-          0 561 0 22 3 1 #"("
-0 0 14 3 7 #"require"
-0 0 22 3 1 #" "
-0 0 14 3 11 #"2htdp/image"
-0 0 22 3 1 #")"
-0 0 22 29 1 #"\n"
-0 0 22 29 1 #"\n"
-0 0 22 3 1 #"("
-0 0 14 3 4 #"load"
-0 0 22 3 1 #" "
-0 0 19 3 10 #"\"stad.scm\""
-0 0 22 3 1 #")"
-0 0 22 29 1 #"\n"
-0 0 22 3 1 #"("
-0 0 14 3 4 #"load"
-0 0 22 3 1 #" "
-0 0 19 3 16 #"\"world-init.scm\""
-0 0 22 3 1 #")"
-0 0 22 29 1 #"\n"
-0 0 22 29 1 #"\n"
-0 0 22 29 1 #"\n"
-0 0 22 29 1 #"\n"
-0 0 22 29 1 #"\n"
-0 0 22 29 1 #"\n"
-0 0 22 3 1 #"("
-0 0 15 3 6 #"define"
-0 0 22 3 1 #" "
-0 0 14 3 11 #"*my-window*"
-0 0 22 3 2 #" ("
-0 0 14 3 3 #"new"
-0 0 22 3 1 #" "
-0 0 14 3 6 #"frame%"
-0 0 22 29 1 #"\n"
-0 0 22 3 26 #"                         ["
-0 0 14 3 5 #"width"
-0 0 22 3 1 #" "
-0 0 20 3 4 #"1200"
-0 0 22 3 3 #"] ["
-0 0 14 3 6 #"height"
-0 0 22 3 1 #" "
-0 0 20 3 4 #"1000"
-0 0 22 3 3 #"] ["
-0 0 14 3 5 #"label"
-0 0 22 3 1 #" "
-0 0 19 3 1 #"\""
-0 0 19 3 2 #"En"
-0 0 19 3 4 #" ram"
-0 0 19 3 1 #"\""
-0 0 22 3 3 #"]))"
-0 0 22 29 1 #"\n"
-0 0 17 3 28 #";;--------- in f\303\266r m\303\245lning"
-0 0 22 29 1 #"\n"
-0 0 22 3 1 #"("
-0 0 15 3 6 #"define"
-0 0 22 3 2 #" ("
-0 0 14 3 9 #"render-fn"
-0 0 22 3 1 #" "
-0 0 14 3 6 #"canvas"
-0 0 22 3 1 #" "
-0 0 14 3 2 #"dc"
-0 0 22 3 1 #")"
-0 0 22 29 1 #"\n"
-0 0 22 3 3 #"  ("
-0 0 15 3 10 #"let-values"
-0 0 22 3 4 #" ([("
-0 0 14 3 1 #"w"
-0 0 22 3 1 #" "
-0 0 14 3 1 #"h"
-0 0 22 3 3 #") ("
-0 0 14 3 4 #"send"
-0 0 22 3 1 #" "
-0 0 14 3 6 #"canvas"
-0 0 22 3 1 #" "
-0 0 14 3 16 #"get-virtual-size"
-0 0 22 3 3 #")])"
-0 0 22 29 1 #"\n"
-0 0 22 3 5 #"    ("
-0 0 14 3 7 #"install"
-0 0 22 3 1 #" "
-0 0 14 3 2 #"dc"
-0 0 22 3 1 #")"
-0 0 22 29 1 #"\n"
-0 0 22 3 4 #"    "
-0 0 22 29 1 #"\n"
-0 0 22 3 4 #"    "
-0 0 17 3 54 #";;(send dc draw-rectangle 200 150 (- w 200) (- h 200))"
-0 0 22 29 1 #"\n"
-0 0 22 3 4 #"    "
-0 0 17 3 47 #";;(tmp dc 199 (+ (send *image* get-width) 150))"
-0 0 22 29 1 #"\n"
-0 0 22 3 4 #"    "
-0 0 22 29 1 #"\n"
-0 0 22 3 5 #"    ("
-0 0 14 3 4 #"send"
-0 0 22 3 1 #" "
-0 0 14 3 2 #"dc"
-0 0 22 3 1 #" "
-0 0 14 3 11 #"draw-bitmap"
-0 0 22 3 1 #" "
-0 0 14 3 7 #"*image*"
-0 0 22 3 2 #" ("
-0 0 14 3 1 #"/"
-0 0 22 3 1 #"("
-0 0 14 3 1 #"-"
-0 0 22 3 2 #" ("
-0 0 14 3 4 #"send"
-0 0 22 3 1 #" "
-0 0 14 3 11 #"*my-window*"
-0 0 22 3 1 #" "
-0 0 14 3 9 #"get-width"
-0 0 22 3 3 #") ("
-0 0 14 3 4 #"send"
-0 0 22 3 1 #" "
-0 0 14 3 7 #"*image*"
-0 0 22 3 1 #" "
-0 0 14 3 9 #"get-width"
-0 0 22 3 2 #"))"
-0 0 20 3 1 #"2"
-0 0 22 3 2 #") "
-0 0 20 3 1 #"0"
-0 0 22 3 1 #")"
-0 0 22 29 1 #"\n"
-0 0 22 3 4 #"    "
-0 0 17 3 50 #";;(rita_med_scale *image2* 0.05 0.05 586.5 726 dc)"
-0 0 22 29 1 #"\n"
-0 0 22 3 4 #"    "
-0 0 22 29 1 #"\n"
-0 0 22 3 5 #"    )"
-0 0 22 29 1 #"\n"
-0 0 22 3 5 #"    )"
-0 0 22 29 1 #"\n"
-0 0 22 29 1 #"\n"
-0 0 22 3 1 #"("
-0 0 15 3 6 #"define"
-0 0 22 3 2 #" ("
-0 0 14 3 14 #"rita_med_scale"
-0 0 22 3 1 #" "
-0 0 14 3 5 #"image"
-0 0 22 3 1 #" "
-0 0 14 3 7 #"scale-x"
-0 0 22 3 1 #" "
-0 0 14 3 7 #"scale-y"
-0 0 22 3 1 #" "
-0 0 14 3 1 #"x"
-0 0 22 3 1 #" "
-0 0 14 3 1 #"y"
-0 0 22 3 1 #" "
-0 0 14 3 2 #"dc"
-0 0 22 3 1 #")"
-0 0 22 29 1 #"\n"
-0 0 22 3 3 #"  ("
-0 0 14 3 4 #"send"
-0 0 22 3 1 #" "
-0 0 14 3 2 #"dc"
-0 0 22 3 1 #" "
-0 0 14 3 5 #"scale"
-0 0 22 3 1 #" "
-0 0 14 3 7 #"scale-x"
-0 0 22 3 1 #" "
-0 0 14 3 7 #"scale-y"
-0 0 22 3 1 #")"
-0 0 22 29 1 #"\n"
-0 0 22 3 5 #"    ("
-0 0 14 3 4 #"send"
-0 0 22 3 1 #" "
-0 0 14 3 2 #"dc"
-0 0 22 3 1 #" "
-0 0 14 3 11 #"draw-bitmap"
-0 0 22 3 1 #" "
-0 0 14 3 5 #"image"
-0 0 22 3 2 #" ("
-0 0 14 3 1 #"*"
-0 0 22 3 1 #" "
-0 0 14 3 1 #"x"
-0 0 22 3 2 #" ("
-0 0 14 3 1 #"/"
-0 0 22 3 1 #" "
-0 0 20 3 1 #"1"
-0 0 22 3 1 #" "
-0 0 14 3 7 #"scale-x"
-0 0 22 3 4 #")) ("
-0 0 14 3 1 #"*"
-0 0 22 3 2 #" ("
-0 0 14 3 1 #"/"
-0 0 22 3 1 #" "
-0 0 20 3 1 #"1"
-0 0 22 3 1 #" "
-0 0 14 3 7 #"scale-y"
-0 0 22 3 2 #") "
-0 0 14 3 1 #"y"
-0 0 22 3 3 #" ))"
-0 0 22 29 1 #"\n"
-0 0 22 3 5 #"    ("
-0 0 14 3 4 #"send"
-0 0 22 3 1 #" "
-0 0 14 3 2 #"dc"
-0 0 22 3 1 #" "
-0 0 14 3 5 #"scale"
-0 0 22 3 2 #" ("
-0 0 14 3 1 #"/"
-0 0 22 3 1 #" "
-0 0 20 3 1 #"1"
-0 0 22 3 1 #" "
-0 0 14 3 7 #"scale-x"
-0 0 22 3 3 #") ("
-0 0 14 3 1 #"/"
-0 0 22 3 1 #" "
-0 0 20 3 1 #"1"
-0 0 22 3 1 #" "
-0 0 14 3 7 #"scale-y"
-0 0 22 3 2 #"))"
-0 0 22 29 1 #"\n"
-0 0 22 3 3 #"  )"
-0 0 22 29 1 #"\n"
-0 0 22 29 1 #"\n"
-0 0 17 3 17 #";;-------- canvas"
-0 0 22 29 1 #"\n"
-0 0 22 29 1 #"\n"
-0 0 22 29 1 #"\n"
-0 0 17 3 24 #";;--------- games canavs"
-0 0 22 29 1 #"\n"
-0 0 22 29 1 #"\n"
-0 0 22 29 1 #"\n"
-0 0 22 3 1 #"("
-0 0 15 3 6 #"define"
-0 0 22 3 1 #" "
-0 0 14 3 12 #"game-canvas%"
-0 0 22 29 1 #"\n"
-0 0 22 3 3 #"  ("
-0 0 15 3 5 #"class"
-0 0 22 3 1 #" "
-0 0 14 3 7 #"canvas%"
-0 0 22 29 1 #"\n"
-0 0 22 3 4 #"    "
-0 0 22 29 1 #"\n"
-0 0 22 3 5 #"    ("
-0 0 15 3 7 #"inherit"
-0 0 22 3 1 #" "
-0 0 14 3 9 #"get-width"
-0 0 22 3 1 #" "
-0 0 22 29 1 #"\n"
-0 0 22 3 13 #"             "
-0 0 14 3 10 #"get-height"
-0 0 22 29 1 #"\n"
-0 0 22 3 13 #"             "
-0 0 14 3 7 #"refresh"
-0 0 22 3 1 #")"
-0 0 22 29 1 #"\n"
-0 0 22 3 4 #"    "
-0 0 22 29 1 #"\n"
-0 0 22 3 5 #"    ("
-0 0 14 3 4 #"init"
-0 0 22 3 2 #" ["
-0 0 14 3 16 #"keyboard-handler"
-0 0 22 3 1 #" "
-0 0 14 3 7 #"display"
-0 0 22 3 1 #"]"
-0 0 22 29 1 #"\n"
-0 0 22 3 11 #"          ["
-0 0 14 3 13 #"mouse-handler"
-0 0 22 3 1 #" "
-0 0 14 3 8 #"mouse-fn"
-0 0 22 3 2 #"])"
-0 0 22 29 1 #"\n"
-0 0 22 3 3 #"   "
-0 0 22 29 1 #"\n"
-0 0 22 3 4 #"    "
-0 0 22 29 1 #"\n"
-0 0 22 3 5 #"    ("
-0 0 15 3 6 #"define"
-0 0 22 3 1 #" "
-0 0 14 3 13 #"on-key-handle"
-0 0 22 3 1 #" "
-0 0 14 3 16 #"keyboard-handler"
-0 0 22 3 1 #")"
-0 0 22 29 1 #"\n"
-0 0 22 3 4 #"    "
-0 0 22 29 1 #"\n"
-0 0 22 3 5 #"    ("
-0 0 15 3 6 #"define"
-0 0 22 3 1 #" "
-0 0 14 3 15 #"on-mouse-handle"
-0 0 22 3 1 #" "
-0 0 14 3 13 #"mouse-handler"
-0 0 22 3 1 #")"
-0 0 22 29 1 #"\n"
-0 0 22 3 4 #"    "
-0 0 22 29 1 #"\n"
-0 0 22 3 5 #"    ("
-0 0 15 3 15 #"define/override"
-0 0 22 3 2 #" ("
-0 0 14 3 7 #"on-char"
-0 0 22 3 1 #" "
-0 0 14 3 2 #"ke"
-0 0 22 3 1 #")"
-0 0 22 29 1 #"\n"
-0 0 22 3 7 #"      ("
-0 0 14 3 13 #"on-key-handle"
-0 0 22 3 1 #" "
-0 0 14 3 2 #"ke"
-0 0 22 3 2 #"))"
-0 0 22 29 1 #"\n"
-0 0 22 3 4 #"    "
-0 0 22 29 1 #"\n"
-0 0 22 3 5 #"    ("
-0 0 15 3 15 #"define/override"
-0 0 22 3 2 #" ("
-0 0 14 3 8 #"on-event"
-0 0 22 3 1 #" "
-0 0 14 3 2 #"me"
-0 0 22 3 1 #")"
-0 0 22 29 1 #"\n"
-0 0 22 3 7 #"      ("
-0 0 14 3 15 #"on-mouse-handle"
-0 0 22 3 1 #" "
-0 0 14 3 2 #"me"
-0 0 22 3 2 #"))"
-0 0 22 29 1 #"\n"
-0 0 22 3 4 #"    "
-0 0 22 29 1 #"\n"
-0 0 22 3 5 #"    ("
-0 0 14 3 9 #"super-new"
-0 0 22 3 3 #")))"
-0 0 22 29 1 #"\n"
-0 0 17 3 11 #";;game slut"
-0 0 22 29 1 #"\n"
-0 0 22 29 1 #"\n"
-0 0 22 29 1 #"\n"
-0 0 22 3 1 #"("
-0 0 15 3 6 #"define"
-0 0 22 3 2 #" ("
-0 0 14 3 8 #"mouse-fn"
-0 0 22 3 1 #" "
-0 0 14 3 5 #"event"
-0 0 22 3 1 #")"
-0 0 22 29 1 #"\n"
-0 0 22 3 3 #"  ("
-0 0 14 3 2 #"if"
-0 0 22 3 2 #" ("
-0 0 14 3 4 #"send"
-0 0 22 3 1 #" "
-0 0 14 3 5 #"event"
-0 0 22 3 1 #" "
-0 0 14 3 12 #"button-down?"
-0 0 22 3 1 #" "
-0 0 20 3 1 #"'"
-0 0 14 3 4 #"left"
-0 0 22 3 1 #")"
-0 0 22 29 1 #"\n"
-0 0 22 3 7 #"      ("
-0 0 15 3 5 #"begin"
-0 0 22 3 1 #"("
-0 0 14 3 6 #"printf"
-0 0 22 3 1 #" "
-0 0 19 3 1 #"\""
-0 0 19 3 5 #"punkt"
-0 0 19 3 1 #" "
-0 0 19 3 1 #"<"
-0 0 19 3 1 #" "
-0 0 19 3 2 #"x:"
-0 0 19 3 1 #" "
-0 0 19 3 2 #"~a"
-0 0 19 3 1 #" "
-0 0 19 3 1 #","
-0 0 19 3 1 #" "
-0 0 19 3 2 #"y:"
-0 0 19 3 1 #" "
-0 0 19 3 2 #"~a"
-0 0 19 3 2 #"  "
-0 0 19 3 1 #">"
-0 0 19 3 3 #" ~n"
-0 0 19 3 1 #"\""
-0 0 22 3 2 #" ("
-0 0 14 3 4 #"send"
-0 0 22 3 1 #" "
-0 0 14 3 5 #"event"
-0 0 22 3 1 #" "
-0 0 14 3 5 #"get-x"
-0 0 22 3 2 #")("
-0 0 14 3 4 #"send"
-0 0 22 3 1 #" "
-0 0 14 3 5 #"event"
-0 0 22 3 1 #" "
-0 0 14 3 5 #"get-y"
-0 0 22 3 2 #"))"
-0 0 22 29 1 #"\n"
-0 0 22 3 12 #"            "
-0 0 22 29 1 #"\n"
-0 0 22 3 13 #"            ("
-0 0 14 3 8 #"for-each"
-0 0 22 3 2 #" ("
-0 0 15 3 6 #"lambda"
-0 0 22 3 2 #" ("
-0 0 14 3 3 #"arg"
-0 0 22 3 2 #") "
-0 0 22 29 1 #"\n"
-0 0 22 3 24 #"                        "
-0 0 22 29 1 #"\n"
-0 0 22 3 25 #"                        ("
-0 0 14 3 4 #"send"
-0 0 22 3 2 #" ("
-0 0 14 3 3 #"cdr"
-0 0 22 3 1 #" "
-0 0 14 3 3 #"arg"
-0 0 22 3 2 #") "
-0 0 14 3 8 #"tr\303\244ffad"
-0 0 22 3 2 #" ("
-0 0 14 3 4 #"send"
-0 0 22 3 1 #" "
-0 0 14 3 5 #"event"
-0 0 22 3 1 #" "
-0 0 14 3 5 #"get-x"
-0 0 22 3 3 #") ("
-0 0 14 3 4 #"send"
-0 0 22 3 1 #" "
-0 0 14 3 5 #"event"
-0 0 22 3 1 #" "
-0 0 14 3 5 #"get-y"
-0 0 22 3 3 #") )"
-0 0 22 29 1 #"\n"
-0 0 22 3 24 #"                        "
-0 0 17 3 3 #";;("
-0 0 17 3 7 #"display"
-0 0 17 3 6 #"  arg)"
-0 0 22 29 1 #"\n"
-0 0 22 3 24 #"                        "
-0 0 17 3 11 #";;(newline)"
-0 0 22 29 1 #"\n"
-0 0 22 3 20 #"                   )"
-0 0 14 3 13 #"lista-st\303\244der"
-0 0 22 3 4 #"))))"
-0 0 22 29 1 #"\n"
-0 0 22 29 1 #"\n"
-0 0 17 3 34 #";;-------- canvas f\303\245r game canvas"
-0 0 22 29 1 #"\n"
-0 0 22 3 1 #"("
-0 0 15 3 6 #"define"
-0 0 22 3 1 #" "
-0 0 14 3 11 #"*my-canvas*"
-0 0 22 3 2 #" ("
-0 0 14 3 3 #"new"
-0 0 22 3 1 #" "
-0 0 14 3 12 #"game-canvas%"
-0 0 22 29 1 #"\n"
-0 0 22 3 26 #"                         ["
-0 0 14 3 6 #"parent"
-0 0 22 3 1 #" "
-0 0 14 3 11 #"*my-window*"
-0 0 22 3 1 #"]"
-0 0 22 29 1 #"\n"
-0 0 22 3 25 #"                         "
-0 0 17 3 27 #";;[keyboard-handler key-fn]"
-0 0 22 29 1 #"\n"
-0 0 22 3 26 #"                         ["
-0 0 14 3 13 #"mouse-handler"
-0 0 22 3 1 #" "
-0 0 14 3 8 #"mouse-fn"
-0 0 22 3 1 #"]"
-0 0 22 29 1 #"\n"
-0 0 22 3 26 #"                         ["
-0 0 14 3 14 #"paint-callback"
-0 0 22 3 1 #" "
-0 0 14 3 9 #"render-fn"
-0 0 22 3 3 #"]))"
-0 0 22 29 1 #"\n"
-0 0 22 29 1 #"\n"
-0 0 17 3 69
-(
- #";; g\303\266r f\303\266nstret synlig "
- #"och s\303\245 att det inte g\303\245r att \303\244ndra storlek"
-) 0 0 22 29 1 #"\n"
-0 0 22 3 1 #"("
-0 0 14 3 4 #"send"
-0 0 22 3 1 #" "
-0 0 14 3 11 #"*my-window*"
-0 0 22 3 1 #" "
-0 0 14 3 4 #"show"
-0 0 22 3 1 #" "
-0 0 20 3 2 #"#t"
-0 0 22 3 1 #")"
-0 0 22 29 1 #"\n"
-0 0 22 3 1 #"("
-0 0 14 3 4 #"send"
-0 0 22 3 1 #" "
-0 0 14 3 11 #"*my-window*"
-0 0 22 3 1 #" "
-0 0 14 3 9 #"min-width"
-0 0 22 3 1 #" "
-0 0 20 3 4 #"1200"
-0 0 22 3 2 #" )"
-0 0 22 29 1 #"\n"
-0 0 22 3 1 #"("
-0 0 14 3 4 #"send"
-0 0 22 3 1 #" "
-0 0 14 3 11 #"*my-window*"
-0 0 22 3 1 #" "
-0 0 14 3 10 #"min-height"
-0 0 22 3 1 #" "
-0 0 20 3 4 #"1000"
-0 0 22 3 2 #" )"
-0 0 22 29 1 #"\n"
-0 0 22 3 1 #"("
-0 0 14 3 4 #"send"
-0 0 22 3 1 #" "
-0 0 14 3 11 #"*my-window*"
-0 0 22 3 1 #" "
-0 0 14 3 17 #"stretchable-width"
-0 0 22 3 1 #" "
-0 0 20 3 2 #"#f"
-0 0 22 3 1 #")"
-0 0 22 29 1 #"\n"
-0 0 22 3 1 #"("
-0 0 14 3 4 #"send"
-0 0 22 3 1 #" "
-0 0 14 3 11 #"*my-window*"
-0 0 22 3 1 #" "
-0 0 14 3 18 #"stretchable-height"
-0 0 22 3 1 #" "
-0 0 20 3 2 #"#f"
-0 0 22 3 1 #")"
-0 0 22 29 1 #"\n"
-0 0 22 29 1 #"\n"
-0 0 22 29 1 #"\n"
-0 0 17 3 6 #";;test"
-0 0 22 29 1 #"\n"
-0 0 22 29 1 #"\n"
-0 0 17 3 28 #";(send dc translate 500 500)"
-0 0 22 29 1 #"\n"
-0 0 17 3 30 #";    (send dc rotate (/ pi 2))"
-0 0 22 29 1 #"\n"
-0 0 17 3 23 #";    (send dc set-pen \""
-0 0 17 3 15 #"blue\" 5 'solid)"
-0 0 22 29 1 #"\n"
-0 0 17 3 35 #";    (send dc draw-line 1 1 500 1 )"
-0 0 22 29 1 #"\n"
-0 0 17 3 23 #";    (send dc set-pen \""
-0 0 17 3 16 #"black\" 5 'solid)"
-0 0 22 29 1 #"\n"
-0 0 17 3 34 #";    (send dc draw-line 1 1 1 500)"
-0 0 22 29 1 #"\n"
-0 0 17 3 23 #";    (send dc set-pen \""
-0 0 17 3 16 #"black\" 1 'solid)"
-0 0 22 29 1 #"\n"
-0 0 17 3 43 #";    (send dc draw-rectangle 200 100 50 50)"
-0 0 22 29 1 #"\n"
-0 0 22 29 1 #"\n"
-0 0 22 29 1 #"\n"
-0 0 17 3 41 #";;test f\303\266r att l\303\244gga in en roterad bild"
-0 0 22 29 1 #"\n"
-0 0 17 3 21 #";(define (tmp dc x y)"
-0 0 22 29 1 #"\n"
-0 0 17 3 26 #";  (send dc translate x y)"
-0 0 22 29 1 #"\n"
-0 0 17 3 28 #";  (send dc rotate (/ pi 2))"
-0 0 22 29 1 #"\n"
-0 0 17 3 36 #";  (send dc draw-bitmap *image* 0 0)"
-0 0 22 29 1 #"\n"
-0 0 17 3 32 #";  (send dc rotate (- (/ pi 2)))"
-0 0 22 29 1 #"\n"
-0 0 17 3 34 #";  (send dc translate (- x) (- y))"
-0 0 22 29 1 #"\n"
-0 0 17 3 4 #";  )"
-0 0 22 29 1 #"\n"
-0 0 22 29 1 #"\n"
-0           0
+(load "world-init.scm")
+
+(define current #f)
+(define *plungt_lista* '())
+(define stad_tmp #f)
+(define stad_tmp2  #f)
+(define lista_väg_punkter '())
+(define lista_att_spara '())
+
+
+(define *my-window* (new frame%
+                         [width 1200] [height 1000] [label "En ram"]))
+;;--------- in för målning
+(define (render-fn canvas dc)
+  (let-values ([(w h) (send canvas get-virtual-size)])
+    (install dc)
+    
+    ;;(send dc draw-rectangle 200 150 (- w 200) (- h 200))
+    ;;(tmp dc 199 (+ (send *image* get-width) 150))
+    
+    (send dc draw-bitmap *image* (/(- (send *my-window* get-width) (send *image* get-width))2) 0)
+    ;;(rita_med_scale *image2* 0.05 0.05 586.5 726 dc)
+    
+    )
+    )
+
+(define (rita_med_scale image scale-x scale-y x y dc)
+  (send dc scale scale-x scale-y)
+    (send dc draw-bitmap image (* x (/ 1 scale-x)) (* (/ 1 scale-y) y ))
+    (send dc scale (/ 1 scale-x) (/ 1 scale-y))
+  )
+
+;;-------- canvas
+
+
+;;--------- games canavs
+
+
+(define game-canvas%
+  (class canvas%
+    
+    (inherit get-width 
+             get-height
+             refresh)
+    
+    (init [keyboard-handler display]
+          [mouse-handler mouse-fn])
+   
+    
+    (define on-key-handle keyboard-handler)
+    
+    (define on-mouse-handle mouse-handler)
+    
+    (define/override (on-char ke)
+      (on-key-handle ke))
+    
+    (define/override (on-event me)
+      (on-mouse-handle me))
+    
+    (super-new)))
+;;game slut
+
+
+(define (mouse-fn event)
+  
+  (if (send event button-down? 'left)
+      (begin(printf "punkt < x: ~a , y: ~a  > ~n" (send event get-x)(send event get-y))
+            
+            (for-each (lambda (arg) 
+                        
+                        (if(send (cdr arg) träffad (send event get-x) (send event get-y) )
+                           (set! current (cdr arg)))
+                        ;;(display  arg)
+                        ;;(newline)
+                   )lista-städer)
+            ;;(add-till-p (read) (send event get-x) (send event get-y))
+            ;;(if current (set-tmp-stad! current) (add_väg_punkter (send event get-x) (send event get-y)))
+            ;;(set! current #f)
+            (if current (printf "stad : ~a ~n"  (send current get-namn)))
+            )
+      
+      )
+  (if (send event button-down? 'right)
+      (begin(save)
+      (display "klar"))))
+
+;;-------- canvas får game canvas
+(define *my-canvas* (new game-canvas%
+                         [parent *my-window*]
+                         ;;[keyboard-handler key-fn]
+                         [mouse-handler mouse-fn]
+                         [paint-callback render-fn]))
+
+;; gör fönstret synlig och så att det inte går att ändra storlek
+(send *my-window* show #t)
+(send *my-window* min-width 1200 )
+(send *my-window* min-height 1000 )
+(send *my-window* stretchable-width #f)
+(send *my-window* stretchable-height #f)
+
+
+;;test
+
+;(send dc translate 500 500)
+;    (send dc rotate (/ pi 2))
+;    (send dc set-pen "blue" 5 'solid)
+;    (send dc draw-line 1 1 500 1 )
+;    (send dc set-pen "black" 5 'solid)
+;    (send dc draw-line 1 1 1 500)
+;    (send dc set-pen "black" 1 'solid)
+;    (send dc draw-rectangle 200 100 50 50)
+
+
+;;test för att lägga in en roterad bild
+;(define (tmp dc x y)
+;  (send dc translate x y)
+;  (send dc rotate (/ pi 2))
+;  (send dc draw-bitmap *image* 0 0)
+;  (send dc rotate (- (/ pi 2)))
+;  (send dc translate (- x) (- y))
+;  )
+
+(define (add-till-p tag x-led y-led)
+  (set! *plungt_lista* (cons (cons tag (cons x-led y-led))  *plungt_lista*)))
+
+(define (add_väg_punkter x y)
+  (set! lista_väg_punkter (cons (cons x y) lista_väg_punkter)))
+
+(define (set-tmp-stad! stad)
+  (if stad_tmp
+      (begin (set! stad_tmp2 stad) (add_till_s (cons (cons stad_tmp stad_tmp2) lista_väg_punkter)) (set! stad_tmp #f) (set! stad_tmp2 #f) (set! lista_väg_punkter '()))
+      (set! stad_tmp stad)
+      ))
+
+(define (add_till_s arg)
+  (set! lista_att_spara (cons arg lista_att_spara))
+  )
+
+(define (save filename lista)
+  (let ((out-put (open-output-file filename ) ))
+        (write lista out-put)
+        (close-output-port out-put)
+        )
+  
+  )
+
+
+(define (add-scale lista scale)
+  (cond
+    ((null? lista) '())
+    (else (cons (cons (caar lista) (cons (cadar lista) (cons (cddar lista) scale ))) (add-scale(cdr lista) scale) ))
+    ))
+
+(define (my-assq tag lista)
+  (cond
+    ((null? lista) #f)
+    ((equal? tag (caar lista)) (car lista))
+    (else (my-assq tag (cdr lista)))))

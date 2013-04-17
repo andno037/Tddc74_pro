@@ -1,23 +1,29 @@
 (define spelare% (class object%
                (init-field färg namn dc x-led y-led tågbild)
                
+               (set! uppdateringslista (cons this uppdateringslista))
                (define väglista '())
                (define antalpoäng 0)
                    
                (super-new)
-               
+               (define/public (get-färg) färg)
                (define/public (get-namn) namn)
                (define/public (get-köpt väg) (send väg köpt? this))
                (define/public (köpta) väglista)
                (define/public (add-poäng! värde) (add-poäng-iter värde))
                 (define (add-poäng-iter värde)
                   (cond
-                    ((= 0 värde) void)
-                    (else (set! antalpoäng (+ 1 antalpoäng)) (set-ny-p antalpoäng) (måla-dig!)(add-poäng-iter (- värde 1))  )))
+                    ((= 0 värde) (uppdatera))
+                    (else (set! antalpoäng (+ 1 antalpoäng)) (set-ny-p antalpoäng) (uppdatera-dig!) (uppdatera) (sleep 1) (add-poäng-iter (- värde 1))  )))
                    
-               (define (måla-dig!)
-                 (send dc draw-ellipse (- x-led 4) (- y-led 4) 8 8)
-                 (printf "~a ~n" antalpoäng)
+               (define/public (uppdatera-dig!)
+                 (define tmp-brush (send dc get-brush))
+                 (send dc set-brush färg 'solid)
+                 (send dc draw-ellipse (- x-led 8) (- y-led 8) 16 16)
+                 
+                 ;;(send dc draw-ellipse  x-led   y-led  1 1)
+                 (send dc set-brush tmp-brush)
+                 ;;(printf "~a ~a ~n" x-led y-led)
                  )    
                    
                (define (set-ny-p poäng)
@@ -44,4 +50,8 @@
                    
                    
                    
-                   ))
+                   (uppdatera)
+                   
+                   )
+  
+  )
