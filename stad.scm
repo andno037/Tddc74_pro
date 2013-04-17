@@ -40,7 +40,7 @@
                 (define (träffad-in? m-x m-y)
                   
                   (>= (*(* 175 my-scale )(* 175 my-scale )) (+ (* (- m-x my-x-led ) (- m-x my-x-led )) (* (- m-y my-y-led ) (- m-y my-y-led ))))
-                 ;;det tar kanske litte tid med det här är pytagoras för att få avståndet av dit klik till stadens mitt ;) 
+                 ;;det tar kanske lite tid med det här är pytagoras för att få avståndet av dit klik till stadens mitt ;) 
                  )
                 (define/public (set-vald! in)
                   (set! vald in)

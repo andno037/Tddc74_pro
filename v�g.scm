@@ -39,7 +39,14 @@
                
                (define/public (get-länkar) länklista)
                
+               (define/public (uppdatera-dig!)
+                 (måla))
+               
                (define (måla-dig!)
+                 (måla)
+                 (set! uppdateringslista (cons this uppdateringslista)))
+                 
+                (define (måla)
                  (printf "   ~a  " (cdar länklista))
                  
                  (send dc draw-line (send (cdar länklista) get-x) (send (cdar länklista) get-y) (send (cdadr länklista) get-x) (send (cdadr länklista) get-y))

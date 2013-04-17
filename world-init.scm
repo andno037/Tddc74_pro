@@ -7,6 +7,7 @@
 (load "stad.scm")
 (load "väg.scm")
 (load "spelare.rkt")
+(load "kort.rkt")
 
 (define (install dc)
 
