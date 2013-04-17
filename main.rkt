@@ -10,7 +10,7 @@
 
 
 
-(define a (new spelare% (färg "blue") (namn "kal") (dc (send *my-canvas* get-dc ) ) (x-led 290) (y-led 16) (tågbild #f)))
+(define a (new spelare% (färg "blue") (namn "kal") (dc (send *my-canvas* get-dc ) ) (x-led 290) (y-led 19) (tågbild #f)))
 
 
 ;;kör uppdatera
