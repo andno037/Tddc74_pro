@@ -5,7 +5,7 @@
                (define väglista '())
                (define antalpoäng 0)
                (define tmp-värde #f)
-               (define kort (list (cons 'red 0 ) (cons 'green 0)))
+               ;;(define kort (list (cons 'red  (new )) (cons 'green 0)))
                    
                    
                (super-new)
