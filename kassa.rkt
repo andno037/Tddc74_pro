@@ -1,4 +1,4 @@
-(define kassa% (class object%)
+(define kassa% (class object%
   (define red 0)
   (define green 0)
   (define väg #f)
@@ -30,4 +30,4 @@
     
     )
   
-  )
+  ))

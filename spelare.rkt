@@ -26,7 +26,7 @@
                  (add-poäng-iter tmp-värde)
                  ) 
                    
-               (define/public (add-kort! ))   
+               (define/public (add-kort!) void)   
                    
                (define/public (uppdatera-dig!)
                  (define tmp-brush (send dc get-brush))
