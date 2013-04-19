@@ -4,17 +4,29 @@
                (set! uppdateringslista (cons this uppdateringslista))
                (define väglista '())
                (define antalpoäng 0)
+               (define tmp-värde #f)
+               (define kort (list (cons 'red 0 ) (cons 'green 0)))
+                   
                    
                (super-new)
                (define/public (get-färg) färg)
                (define/public (get-namn) namn)
                (define/public (get-köpt väg) (send väg köpt? this))
                (define/public (köpta) väglista)
-               (define/public (add-poäng! värde) (add-poäng-iter värde))
-                (define (add-poäng-iter värde)
+               ;;(define/public (add-poäng! värde)(set! tmp-värde värde) (thread add-poäng-start))
+                (define/public (add-poäng! värde) ( add-poäng-iter värde))
+                   (define (add-poäng-iter värde)
                   (cond
                     ((= 0 värde) (uppdatera))
-                    (else (set! antalpoäng (+ 1 antalpoäng)) (set-ny-p antalpoäng) (uppdatera-dig!) (uppdatera) (sleep 1) (add-poäng-iter (- värde 1))  )))
+                    (else (set! antalpoäng (+ 1 antalpoäng)) (set-ny-p antalpoäng) (uppdatera-dig!) (uppdatera) (sleep 0.2) (add-poäng-iter (- värde 1))  )))
+               
+                   
+                   
+               (define (add-poäng-start)
+                 (add-poäng-iter tmp-värde)
+                 ) 
+                   
+               (define/public (add-kort! ))   
                    
                (define/public (uppdatera-dig!)
                  (define tmp-brush (send dc get-brush))

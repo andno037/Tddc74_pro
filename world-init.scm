@@ -8,6 +8,8 @@
 (load "väg.scm")
 (load "spelare.rkt")
 (load "kort.rkt")
+(load "tåg-kort.rkt")
+(load "kassa.rkt")
 
 (define (install dc)
 
@@ -26,8 +28,16 @@
   (my-load2 "vägar.scm" )
   (for-each  (lambda (arg) (add-stad (car arg) (new stad% [namn (car arg)] [dc dc] [x-led (cadr arg)] [y-led (caddr arg)] [bild1 *image2*] [bild2 *image3*] [ scale (cdddr arg)])) ) *plungt_lista*)
   (for-each (lambda (arg) (add-väg (new väg% [längd 5] [poäng 5] [dc dc] [stad1 (assq (caaar arg) lista-städer)] [stad2 (assq (cadar arg)lista-städer)]  [färg "black"] [p-lista (cdr arg)]))) lista_att_spara)
+  
   (display "ok")
   )
+;;install global
+
+
+;;
+
+
+
 (define (add-väg tmp-v)
   
   ;;(printf "  ~a     ~a  ~n" (caar(send tmp-v get-länkar))  (caadr(send tmp-v get-länkar)))
