@@ -15,6 +15,7 @@
                        ((null? current) (error "du det var tomte här"))
                        (else  (set! antal-kort (- antal-kort 1))(set! ut (mcar(mcdr lista-kort))) (set-mcdr! lista-kort (mcdr current))ut)
                        )))
+                   
                    (define/public (get-antal-kort) antal-kort)
                    
                    (define/public (del-kort) void)
@@ -29,9 +30,4 @@
                    (define/public (visa)
                      
                      (mfor-each (lambda (arg) (printf "~a ~n" (make-object image-snip% (send arg visa)) )) (mcdr lista-kort))
-                     )
-                   
-                   
-                     
-                     
-                     ))
+                     )))

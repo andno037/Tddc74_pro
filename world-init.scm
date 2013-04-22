@@ -12,6 +12,7 @@
 (load "tåg-kort.rkt")
 (load "kassa.rkt")
 (load "kortlek.scm")
+(load "master-kortlek.rkt")
 
 (define (install dc)
 
