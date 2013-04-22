@@ -5,7 +5,8 @@
                (define väglista '())
                (define antalpoäng 0)
                (define tmp-värde #f)
-               ;;(define kort (list (cons 'red  (new )) (cons 'green 0)))
+               (define antal-kort 0)    
+               (define alla-kort (list (cons 'red  (new kortlek%)) (cons 'green (new kortlek%)) (cons 'blue (new kortlek%))  (cons 'yellow (new kortlek%)) (cons 'grey (new kortlek%)) (cons 'rainbow (new kortlek%)) (cons 'orange (new kortlek%)) ))
                    
                    
                (super-new)
@@ -26,7 +27,22 @@
                  (add-poäng-iter tmp-värde)
                  ) 
                    
-               (define/public (add-kort!) void)   
+               (define/public (add-kort! kort) 
+                 (send (cdr (assq (send kort get-färg) alla-kort)) add-kort! kort)(set! antal-kort (+ antal-kort 1)))
+                   
+               (define/public (ta-kort! tag)
+                 
+                 (set! antal-kort (- antal-kort 1)) (if (assq tag alla-kort) (send (cdr (assq tag alla-kort)) ta-kort!)))
+                 
+                 
+               (define/public get-antal-kort
+                 (lambda arg
+                   (cond
+                     ((null? arg) antal-kort)
+                     ( (assq (car arg) alla-kort) (send (cdr (assq (car arg) alla-kort)) get-antal-kort))
+                     )))
+                   
+                
                    
                (define/public (uppdatera-dig!)
                  (define tmp-brush (send dc get-brush))

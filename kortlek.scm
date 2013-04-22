@@ -9,8 +9,6 @@
                    
                    (define/public (ta-kort!)
                      (let ((current (mcdr lista-kort) ) (ut #f))
-                     
-                     
                      (cond
                        ((null? current) (error "du det var tomte här"))
                        (else  (set! antal-kort (- antal-kort 1))(set! ut (mcar(mcdr lista-kort))) (set-mcdr! lista-kort (mcdr current))ut)
