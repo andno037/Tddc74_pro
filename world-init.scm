@@ -1,3 +1,4 @@
+(require racket/mpair)
 (define *image* (read-bitmap "nordic_map.jpg" ))
 (define *image2* (read-bitmap "grön_knapp.png" ))
 (define *image3* (read-bitmap "gul_knapp.png" ))

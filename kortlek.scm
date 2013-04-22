@@ -28,19 +28,9 @@
                    ;;temporär för att visa i command föster
                    (define/public (visa)
                      
-                     (m-for-each (lambda (arg) (printf "~a ~n" (make-object image-snip% (send arg visa)) )) (mcdr lista-kort))
+                     (mfor-each (lambda (arg) (printf "~a ~n" (make-object image-snip% (send arg visa)) )) (mcdr lista-kort))
                      )
                    
-                   (define (m-for-each fun lista)
-                     
-                     (cond
-                       
-                       ((or (null? lista) (eq? lista '{})) void)
-                       ((null? (mcar lista)) void)
-                       (else (fun (mcar lista)) (m-for-each fun (mcdr lista)))
-                       )
-                     
-                     )
                    
                      
                      
