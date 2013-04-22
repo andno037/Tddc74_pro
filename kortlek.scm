@@ -1,8 +1,9 @@
 (define kortlek% (class object%
-                   
-                   (super-new)
+                   (init-field )
+                   (super-new )
                    
                    (define lista-kort (mcons 'lek  '{}))
+                   (define antal-kort 0)
                    
                    (define/public (blanda) void)
                    
@@ -12,14 +13,15 @@
                      
                      (cond
                        ((null? current) (error "du det var tomte här"))
-                       (else (set! ut (mcar(mcdr lista-kort))) (set-mcdr! lista-kort (mcdr current))ut)
+                       (else  (set! antal-kort (- antal-kort 1))(set! ut (mcar(mcdr lista-kort))) (set-mcdr! lista-kort (mcdr current))ut)
                        )))
+                   (define/public (get-antal-kort) antal-kort)
                    
                    (define/public (del-kort) void)
                    
                    (define/public (add-kort! kort-in)
                      
-                     (set-mcdr! lista-kort (mcons kort-in (mcdr lista-kort))))
+                     (set-mcdr! lista-kort (mcons kort-in (mcdr lista-kort))) (set! antal-kort (+ antal-kort 1)))
                      
                      
                    

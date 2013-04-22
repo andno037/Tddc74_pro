@@ -5,4 +5,9 @@
                (define/public (get-färg)
                  färg
                  )
+                    
+               (define/public (visa)
+                 (send this get-bild)
+                 )     
+                    
                ))
