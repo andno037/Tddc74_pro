@@ -12,9 +12,9 @@
                    (define/public (master-ta-random!)
                      (send (cdr ((list-ref lista-kort (+ (random 9) 1)))) ta-kort!))
                           
-                   (define/public (get-antal-kort) antal-kort)
+                   (define/public (get-antal-master) antal-kort)
                    
-                   (define/public (add-kort! kort-in)
+                   (define/public (master-add-kort! kort-in)
                      (begin
                      (send (cdr (assq (send kort-in get-färg) lista-kort)) add-kort! kort-in)
                      (set! antal-kort (+ antal-kort 1))))
@@ -23,7 +23,7 @@
                      
                    
                    ;;temporär för att visa i command föster
-                   (define/public (visa)
+                   (define/public (visa-master)
                      
                      (for-each (lambda (arg) (printf "~a ~n" (make-object image-snip% (send arg visa)) )) (cdr lista-kort))
                      )))
