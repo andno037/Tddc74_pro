@@ -4,6 +4,8 @@
 (load "world-init.scm")
 
 (define current #f)
+(define current2 #f)
+(define *current-väg* #f)
 (define *plungt_lista* '())
 (define stad_tmp #f)
 (define stad_tmp2  #f)
@@ -67,12 +69,12 @@
 (define (mouse-fn event)
   
   (if (send event button-down? 'left)
-      (begin(printf "punkt < x: ~a , y: ~a  > ~n" (send event get-x)(send event get-y))
+      (begin(printf "punkt < x: ~a , y: ~a  >      ~n" (send event get-x)(send event get-y))
             
             (for-each (lambda (arg) 
                         
                         (if(send (cdr arg) träffad (send event get-x) (send event get-y) )
-                           (set! current (cdr arg)))
+                           (if (and current(not current2)) (begin (set! current2 (cdr arg))(set-current-väg)) (set! current (cdr arg))))
                         ;;(display  arg)
                         ;;(newline)
                    )lista-städer)
@@ -80,12 +82,13 @@
             ;;(if current (set-tmp-stad! current) (add_väg_punkter (send event get-x) (send event get-y)))
             ;;(set! current #f)
             (if current (printf "stad : ~a ~n"  (send current get-namn)))
+            (printf "hej current väg är ~a" *current-väg*)
             )
       
       )
   (if (send event button-down? 'right)
-      (begin(save)
-      (display "klar"))))
+      
+      (display "klar")))
 
 ;;-------- canvas får game canvas
 (define *my-canvas* (new game-canvas%
@@ -159,3 +162,13 @@
     ((null? lista) #f)
     ((equal? tag (caar lista)) (car lista))
     (else (my-assq tag (cdr lista)))))
+
+(define (set-current-väg)
+ (let ((lista-vägar (send current vägar)))
+    
+    (set! *current-väg* (filter (lambda (arg)  (or (equal? (send current2 get-namn)  (caadr(send arg get-länkar))) (equal? (send current2 get-namn)  (caar(send arg get-länkar)))) ) lista-vägar)))
+    (set! current #f)
+    (set! current2 #f)
+  )
+
+

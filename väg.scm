@@ -1,5 +1,7 @@
 (define väg% (class object%
                (init längd poäng dc stad1 stad2 färg p-lista)
+               
+               
                (define denna-dc dc)
                (define denna-längd längd)
                (define denna-poäng poäng)
@@ -9,11 +11,14 @@
                (define denna-ägare #f)
                (define lista-p p-lista)
                (define my-färg färg)
+               (send (cdr stad1) add-väg! this)
+               (send (cdr stad2) add-väg! this)
                (super-new)
                
                (define/public (get-lista-p)
                  lista-p
                  )
+               (define/public (kostnad) denna-längd)
                
                (define/public (add-p x y)
                  (set! lista-p (cons (cons x y) lista-p)))
@@ -41,6 +46,8 @@
                
                (define/public (uppdatera-dig!)
                  (måla))
+               
+               (define/public (get-färg) my-färg)
                
                (define (måla-dig!)
                  (måla)

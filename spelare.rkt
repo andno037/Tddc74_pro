@@ -30,9 +30,18 @@
                (define/public (add-kort! kort) 
                  (send (cdr (assq (send kort get-färg) alla-kort)) add-kort! kort)(set! antal-kort (+ antal-kort 1)))
                    
-               (define/public (ta-kort! tag)
-                 
-                 (set! antal-kort (- antal-kort 1)) (if (assq tag alla-kort) (send (cdr (assq tag alla-kort)) ta-kort!)))
+               (define/public (visa) 
+                 (for-each (lambda (arg)  (send (cdr arg) visa) )alla-kort))
+                   
+                   
+               (define/public ta-kort!
+                 (lambda (tag . antal)
+                   
+                   (cond
+                     ((null? antal) (set! antal-kort (- antal-kort 1)) (if (assq tag alla-kort) (send (cdr (assq tag alla-kort)) ta-kort!)))
+                     ((= 0 (car antal)) '())
+                     (else (cons (ta-kort! tag) (ta-kort! tag (- (car antal) 1)))))))    
+                   
                  
                  
                (define/public get-antal-kort
