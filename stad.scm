@@ -23,8 +23,8 @@
                 (define/public (get-scale)
                   my-scale)
                 
-                (define/public (add-väg! namn väg)
-                  (set! *lista-vägar* (cons (cons namn väg) *lista-vägar*)))
+                (define/public (add-väg!  väg)
+                  (set! *lista-vägar* (cons  väg *lista-vägar*)))
                 
                 (define/public (get-väg namn)
                   (assq namn *lista-vägar*))

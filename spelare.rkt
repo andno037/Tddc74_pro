@@ -6,7 +6,7 @@
                (define antalpoäng 0)
                (define tmp-värde #f)
                (define antal-kort 0)    
-               (define alla-kort (list (cons 'red  (new kortlek%)) (cons 'green (new kortlek%)) (cons 'blue (new kortlek%))  (cons 'yellow (new kortlek%)) (cons 'grey (new kortlek%)) (cons 'rainbow (new kortlek%)) (cons 'orange (new kortlek%)) ))
+               (define alla-kort (list (cons 'red  (new kortlek%)) (cons 'green (new kortlek%)) (cons 'blue (new kortlek%))  (cons 'yellow (new kortlek%)) (cons 'white (new kortlek%)) (cons 'rainbow (new kortlek%)) (cons 'purple (new kortlek%)) (cons 'brown (new kortlek%)) (cons 'black (new kortlek%)) ))
                    
                    
                (super-new)
