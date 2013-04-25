@@ -75,6 +75,10 @@
                         
                         (if(send (cdr arg) träffad (send event get-x) (send event get-y) )
                            (if (and current(not current2)) (begin (set! current2 (cdr arg))(set-current-väg)) (set! current (cdr arg))))
+                        
+                        ;;fel I if då vägen inte sätter en ny väg current är fast.
+                        
+                        
                         ;;(display  arg)
                         ;;(newline)
                    )lista-städer)
