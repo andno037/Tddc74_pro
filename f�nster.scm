@@ -74,7 +74,10 @@
             (for-each (lambda (arg) 
                         
                         (if(send (cdr arg) träffad (send event get-x) (send event get-y) )
-                           (if (and current(not current2)) (begin (set! current2 (cdr arg))(set-current-väg)) (set! current (cdr arg))))
+                           (cond
+                             ((and current(not current2)) (begin (set! current2 (cdr arg))(set-current-väg)) )
+                             ((and current  current2) (set! current (cdr arg)))
+                             (else (set! current (cdr arg)))))
                         
                         ;;fel I if då vägen inte sätter en ny väg current är fast.
                         
