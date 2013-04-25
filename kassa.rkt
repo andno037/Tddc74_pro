@@ -48,7 +48,9 @@
   (define (köp väg )
     (if (tillräckligt? väg)
         (begin
-        (send spelare köp-väg! väg))))
+        (send spelare köp-väg! väg)
+        
+        )))
                  ;;Lägg in discard
   
   (define (tillräckligt? väg)
