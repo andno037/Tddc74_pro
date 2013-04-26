@@ -36,8 +36,51 @@
   )
 ;;install global
 
+(define current #f)
+(define current2 #f)
+(define *current-väg* #f)
+(define *plungt_lista* '())
+(define stad_tmp #f)
+(define stad_tmp2  #f)
+(define lista_väg_punkter '())
+(define lista_att_spara '())
+
+
+
+(define *discard* (new master-kortlek%))
+(define *deck* (new master-kortlek%))
+
+
+
+
+(define kassa (new kassa%))
+
 
 ;;
+
+(define (make-cards tfärg antal)
+  (cond
+    ((= antal 0) '())
+    (else (cons (new tåg-kort% (bild (read-bitmap (get-file-name tfärg))) (ägare #f) (färg tfärg))(make-cards tfärg (- antal 1))))))
+
+(define (get-file-name färg)
+  (let ((return (string-append (symbol->string färg) ".png")))
+    return))
+
+(let ((lista (append
+                  (make-cards 'green 12)
+                  (make-cards 'red 12)
+                  (make-cards 'rainbow 14)
+                  (make-cards 'blue 12)
+                  (make-cards 'purple 12)
+                  (make-cards 'black 12)
+                  (make-cards 'white 12)
+                  (make-cards 'brown 12)
+                  (make-cards 'yellow 12))))
+  (for-each (lambda (arg) (send *deck* master-add-kort! arg) ) lista)
+  
+  )
+  
 
 
 

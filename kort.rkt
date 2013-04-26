@@ -1,5 +1,5 @@
 (define kort% (class object%
-               (init-field bild dc ägare)   
+               (init-field bild  ägare)   
                (define min-x-koord #f)
                (define min-y-koord #f)
                (define min-x-skala #f)

@@ -15,7 +15,7 @@
                  
   ;;Väg ska vara i listform med antingen en eller två vägar!
   
-  (define/public (start tväg tspelare) (reset) (set! väglista tväg ) (set! spelare tspelare))
+  (define/public (start tväg tspelare) (reset) (set! väglista (filter (lambda (arg) (not (send arg köpt?))) tväg )) (set! spelare tspelare))
   
   (define/public (betala färg)
     (set! tmp-färg färg)
@@ -29,7 +29,7 @@
       ((eq? färg 'yellow) (set! yellow (+ yellow 1))) 
       ((eq? färg 'red) (set! red (+ red 1)))
       ((eq? färg 'green) (set! green (+ green 1))))
-      (for-each köp väglista))
+      (if (not(null? väglista)) (for-each köp väglista) (begin(printf "nu är det fel") (reset))))
                  
   (define/public (reset)
     (begin
@@ -43,14 +43,17 @@
       (set! brown 0)
       (set! yellow 0)
       (set! spelare #f)
-      (set! väg #f)))
+      (set! väglista #f)))
   
   (define (köp väg )
-    (if (tillräckligt? väg)
+    (if (and (tillräckligt? väg)(not( send väg köpt?)))
         (begin
         (send spelare köp-väg! väg)
+        (reset)
+        )
         
-        )))
+        
+        ))
                  ;;Lägg in discard
   
   (define (tillräckligt? väg)

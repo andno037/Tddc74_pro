@@ -2,15 +2,18 @@
                           
                    (super-new )
                    
+                          
                    (define lista-kort (list (cons 'red (new kortlek%)) (cons 'blue (new kortlek%))(cons 'yellow (new kortlek%))(cons 'green (new kortlek%))
-                   (cons 'orange (new kortlek%))(cons 'purple (new kortlek%))(cons 'grey (new kortlek%))(cons 'black (new kortlek%))(cons 'rainbow (new kortlek%))))
+                   (cons 'white (new kortlek%))(cons 'purple (new kortlek%))(cons 'brown (new kortlek%))(cons 'black (new kortlek%))(cons 'rainbow (new kortlek%))))
                    (define antal-kort 0)
                    
+                     
+                          
                    (define/public (master-ta-kort! tag)
                     (send (cdr (assq tag lista-kort)) ta-kort!))
   
                    (define/public (master-ta-random!)
-                     (send (cdr ((list-ref lista-kort (+ (random 9) 1)))) ta-kort!))
+                     (send (cdr (list-ref lista-kort (random 9))) ta-kort!))
                           
                    (define/public (get-antal-master) antal-kort)
                    
@@ -25,7 +28,7 @@
                           
                           
                  (define (master-add-kort-intärn! kort-in)
-                   (send (cdr (assq (send kort-in get-färg) lista-kort)) add-kort! kort-in)(set! antal-kort (+ antal-kort 1))
+                   (send (cdr (assq (send kort-in get-färg) lista-kort) ) add-kort! kort-in)(set! antal-kort (+ antal-kort 1))
                    
                    )         
                           
