@@ -13,6 +13,7 @@
 (load "kassa.rkt")
 (load "kortlek.scm")
 (load "master-kortlek.rkt")
+(load "Game.rkt")
 
 (define (install dc)
 
@@ -44,7 +45,7 @@
 (define stad_tmp2  #f)
 (define lista_väg_punkter '())
 (define lista_att_spara '())
-
+(define currentvägnamn "Ingen väg vald.")
 
 
 (define *discard* (new master-kortlek%))

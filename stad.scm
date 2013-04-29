@@ -45,7 +45,9 @@
                 (define/public (set-vald! in)
                   (set! vald in)
                   (if vald
-                      (måla-dig! my-bild1)
+                      (begin
+                      (send DM rita-currentväg)
+                      (måla-dig! my-bild1))
                       (måla-dig! my-bild2)
                       ))
                 (define (måla-dig! bild-tmp)

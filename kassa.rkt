@@ -50,10 +50,7 @@
         (begin
         (send spelare köp-väg! väg)
         (reset)
-        )
-        
-        
-        ))
+        )))
                  ;;Lägg in discard
   
   (define (tillräckligt? väg)
